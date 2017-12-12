@@ -1,6 +1,6 @@
 <?php
 
-//never abbreviate!
+//ONE: never abbreviate!
 class Trnsltr
 {
 
@@ -31,3 +31,8 @@ class Order
 }
 
 $order->shipOrder(); //could change method to ship to avoid repeating order
+
+
+
+}
+
