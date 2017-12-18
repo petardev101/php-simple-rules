@@ -56,3 +56,32 @@ $john = new GymMember('John Doe', new Weight(160));
 
 $john->workoutFor(TimeLength::fromHours(3));
 
+class TimeLength
+{
+    protected $seconds;
+
+    private function __construct($seconds)
+    {
+        $this->seconds = $seconds;
+    }   
+
+    public static function fromMinutes($minutes)
+    {
+        return new static($minute * 60);
+    }
+
+    public static function fromHours($hours)
+    {
+        return new static($hours * 60 * 60);
+    }
+
+    public function inSeconds()
+    {
+        return $this->seconds;
+    }
+
+    public function inHours()
+    {
+        return $this->seconds / 60 / 60; 
+    }
+}
